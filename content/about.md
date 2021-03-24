@@ -13,4 +13,4 @@ An aspiring Data Scientist.
 
 I am base in Hayward, California. 
 
-This blog is built with [blogdown](https://github.com/rstudio/blogdown) and [Hugo](https://gohugo.io/), and deployed using [Github Pages](https://pages.github.com/)
+This blog is built with [blogdown](https://github.com/rstudio/blogdown) and [Hugo](https://gohugo.io/), and deployed using [Netlify](https://www.netlify.com/)
