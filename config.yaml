@@ -1,0 +1,60 @@
+baseURL: https://example.com
+languageCode: en
+DefaultContentLanguage: en
+title: Website of Zhaoshan Duan
+theme: anatole
+summarylength: 10
+enableEmoji: yes
+enableRobotsTXT: yes
+pygmentsUseClasses: yes
+pygmentsCodeFences: yes
+pygmentsCodefencesGuessSyntax: yes
+params:
+  author: Zhaoshan Duan
+  customCss: []
+  customJs: []
+  description: Call me Joshua
+  doNotLoadAnimations: no
+  favicon: favicons/
+  images: images/masked.jpg
+  displayMode: dark
+  disableThemeSwitcher: true
+  keywords: ''
+  mainSections: post
+  math:
+    enable: no
+    use: katex
+  profilePicture: images/masked.jpg
+  simpleAnalytics: {}
+  socialIcons:
+    - icon: fab fa-linkedin
+      title: Linkedin
+      url: https://www.linkedin.com/in/zhaoshan-duan-37bab885/
+    - icon: fab fa-github
+      title: GitHub
+      url: https://github.com/Zhaoshan-Duan
+    - icon: fab fa-twitter
+      title: twitter
+      url: https://twitter.com/JoshuaD924
+    - icon: fas fa-envelope
+      title: e-mail
+      url: joshua.duan47@gmail.com
+  title: I'm Zhaoshan Duan
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 100
+    - identifier: posts
+      name: Posts
+      url: /post/
+      weight: 200
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 300
+    - identifier: Resume
+      name: Resume
+      url: /resume/
+      weight: 400
