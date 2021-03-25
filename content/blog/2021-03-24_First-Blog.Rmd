@@ -2,9 +2,17 @@
 title: "First Blog"
 author: "Zhaoshan Duan"
 date: "3/24/2021"
-output: html_document
+output: 
+  html_document
+  md_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+# Why 
+
+While I doubt anyone beside myself will read this blog,
+
+Is this a blog ? Is this a diary ? Or is this a place for me to self-check my sanity after more than one year of staying at home.

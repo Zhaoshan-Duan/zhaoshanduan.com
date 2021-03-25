@@ -27,14 +27,15 @@ profilePicture = "images/masked.jpg"
 keywords = ""
 favicon = "favicons/"
 # example ["css/custom.css"]
-customCss = [css/custom.css]
+customCss = []
 # example ["js/custom.js"]
-customJs = [js/custom.js] 
-mainSections = ["post"]
+customJs = [] 
+mainSections = ["blog"]
 images = ["images/masked.jpg"]
 doNotLoadAnimations = false
 displayMode = "dark"
 disableThemeSwitcher = true
+
 # Form Spree Contact Form
 #contactFormAction = "https://formspree.io/f/your-form-hash-here"
 # Google Site Verify
