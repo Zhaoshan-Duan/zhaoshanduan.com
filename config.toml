@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "/"
 languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Website of Zhaoshan Duan"
@@ -27,9 +27,9 @@ profilePicture = "images/masked.jpg"
 keywords = ""
 favicon = "favicons/"
 # example ["css/custom.css"]
-customCss = []
+customCss = [css/custom.css]
 # example ["js/custom.js"]
-customJs = [] 
+customJs = [js/custom.js] 
 mainSections = ["post"]
 images = ["images/masked.jpg"]
 doNotLoadAnimations = false
@@ -90,10 +90,10 @@ url = "joshua.duan47@gmail.com"
   url = "/"
 
   [[menu.main]]
-  name = "Posts"
+  name = "Blog"
   weight = 200
-  identifier = "posts"
-  url = "/post/"
+  identifier = "blog"
+  url = "/blog/"
 
   [[menu.main]]
   name = "About"
