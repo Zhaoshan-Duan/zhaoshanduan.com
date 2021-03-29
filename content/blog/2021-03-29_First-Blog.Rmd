@@ -26,7 +26,7 @@ Originally, riding on the excitement of deploying the site successfully, I was p
 
 -   **Monday** blog sets up my reading plan and studying/coding plan for the week as well as self-checks on mental health.
 
--   **Tuesday** blog will be honoring the tradition of [\#TidyTuesday](https://twitter.com/search?q=%23tidytuesday&src=typed_query). I will explore Machine Learning Models of the `tidymodel` package, run some code from [Tidy Modeling with R.](https://www.tmwr.org/) I will probably test out some blog project on the personal website of [Julia Silge](https://juliasilge.com/) and other established R developers.
+-   **Tuesday** blog will be honoring the tradition of [\#TidyTuesday](https://twitter.com/search?q=%23tidytuesday&src=typed_query). I will explore Machine Learning Models of the `tidymodel` package, run some code from [Tidy Modeling with R.](https://www.tmwr.org/) I will probably test out some blog project on the personal website of [Julia Silge](https://juliasilge.com/) and other R giants' work.
 
 -   **Wednesday** blog will be messing with Python. Since all of my knowledge of Python are self-taught, I will include some algorithm and data structure practices as well.
 
