@@ -33,8 +33,8 @@ customJs = []
 mainSections = ["blog"]
 images = ["images/masked.jpg"]
 doNotLoadAnimations = false
-displayMode = "dark"
-disableThemeSwitcher = true
+displayMode = ""
+disableThemeSwitcher = false
 
 # Form Spree Contact Form
 #contactFormAction = "https://formspree.io/f/your-form-hash-here"
@@ -96,14 +96,26 @@ url = "joshua.duan47@gmail.com"
   identifier = "blog"
   url = "/blog/"
 
-  [[menu.main]]
-  name = "About"
-  weight = 300
-  identifier = "about"
-  url = "/about/"
+#  [[menu.main]]
+#  name = "Resume"
+#  weight = 400
+#  identifier = "Resume"
+#  url = "/resume/"
 
   [[menu.main]]
-  name = "Resume"
+  name = "Projects"
+  weight = 300
+  identifier = "Projects"
+  url = "/projects/"
+
+  [[menu.main]]
+  name = "Creative"
   weight = 400
-  identifier = "Resume"
-  url = "/resume/"
+  identifier = "Creative"
+  url = "/creative/"
+  
+  [[menu.main]]
+  name = "About"
+  weight = 500
+  identifier = "about"
+  url = "/about/"
