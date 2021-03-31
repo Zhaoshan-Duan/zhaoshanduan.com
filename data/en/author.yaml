@@ -1,0 +1,17 @@
+# some information about you
+name: "Zhaoshan Duan"
+nickname: "Joshua"
+
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hi, I am"
+image: "images/author/masked.png"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "joshua.duan47@gmail.com"
+  phone: "+15103142760"
+
+# some summary about what you do
+summary:
+  - Call me Joshua
+  - I am an aspiring Data Scientist
+  - I love Machine Learning

@@ -1,0 +1,202 @@
+---
+title: 'EDA on #TidyTuesday Makeup Shades Data'
+author: "Zhaoshan Duan"
+date: "2021-03-30"
+output:
+  blogdown::html_page
+header-includes:
+  \usepackage{emo}
+categories:
+  - rstats
+  - tidymodels
+tags:
+  - rstats
+  - TidyTuesday
+menu:
+  sidebar:
+    name: EDA on TidyTuesday Makeup Shades Data
+    identifier: EDA on TidyTuesday Makeup Shades Data
+    weight: 10
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<pre class="r"><code>library(tidyverse)
+library(tidytuesdayR)
+library(emo)</code></pre>
+<p>Since this is my first technical post, the goal right now is to get comfortable with, essentially including “codes” in my blog posts. I would like to get familiar with exploratory data analysis using this week’s <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-03-30/readme.md">#TidyTuesday dasta set</a> on Makeup Shades. This data comes from <a href="https://pudding.cool/">The Pudding</a>, with a corresponding <a href="https://pudding.cool/2021/03/foundation-names/">article</a> as well as a <a href="https://github.com/the-pudding/data/tree/master/foundation-names">github repository</a>.</p>
+<p><strong><em>Self-reflection:</em></strong> I do have to admit that, as a second-semester graduate students in Data Science with some knowledge of data wrangling in R, I am definitely not yet comfortable with exploratory analysis both from high level understanding and low level syntax.</p>
+<p>Exploratory data analysis is an iterative cycle with flexible rules. Now I realize that it requires more creative thinking than I thought as I write this post. I lately resumed my daily work and started to listen to the DataFramed Podcast. Interestingly, this realization of EDA resonates with a segment of what a great Data Scientist is in an episode with Hilary Mason:</p>
+<blockquote>
+<p>“… framing the questions is where the challenge is… (A great Data Scientist) it’s not about whose math is the hardest math, it’s really about, ‘How do I get to a robust problem definition that I can solve, that will actually give someone an insight they didn’t otherwise have?’” <a href="https://twitter.com/hmason?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Hilary Mason</a> (<a href="https://www.datacamp.com/community/podcast/data-science-past-present-and-future">DataFramed</a> - Episode 1, 2018)</p>
+</blockquote>
+<p>(Or Does it? I’m not sure. My opinion about this is based on my current level of knowledge and understanding of the Data Science discipline. It would be interesting for future me to read about this opinion again, if we ever made it into the field. 🙏 )</p>
+<p>I found myself exploring the Makeup Shade data set like a headless chicken. An entire afternoon was wasted as I struggled to find out what other questions can be formulated on this data set while being disturbed from reports of increasing anti-Asian sentiment #<a href="https://www.gofundme.com/f/support-aapi-community-fund">StopAsianHate</a>. The original article does a fantastic job on revealing anti-POC microagressions in the beauty industry. How “consistently numbering the lightest shades first … when coupled with the numerous microaggressions marginalized groups face … becomes part of a larger conversation around how deeper shades, and the folks who wear them, are treated by the beauty industry at large.” (<a href="https://pudding.cool/2021/03/foundation-names/">The Naked Truth</a>, March 2021)</p>
+<p>Therefore, I decided that I will start simple, and deliberately follow suggestions from <a href="https://r4ds.had.co.nz/exploratory-data-analysis.html">R for Data Science</a> for this post.</p>
+<div id="exploration" class="section level1">
+<h1>Exploration</h1>
+<p>First, let’s get the data.</p>
+<pre class="r"><code>tuesdata &lt;- tidytuesdayR::tt_load(2021, week = 14)</code></pre>
+<pre><code>## 
+##  Downloading file 1 of 5: `ulta.csv`
+##  Downloading file 2 of 5: `sephora.csv`
+##  Downloading file 3 of 5: `allShades.csv`
+##  Downloading file 4 of 5: `allNumbers.csv`
+##  Downloading file 5 of 5: `allCategories.csv`</code></pre>
+<pre class="r"><code>tuesdata %&gt;% map(glimpse)</code></pre>
+<pre><code>## Rows: 4,004
+## Columns: 8
+## $ brand       &lt;chr&gt; &quot;CoverGirl&quot;, &quot;CoverGirl&quot;, &quot;CoverGirl&quot;, &quot;CoverGirl&quot;, &quot;Co...
+## $ product     &lt;chr&gt; &quot;TruBlend Matte Made Liquid Foundation&quot;, &quot;TruBlend Matt...
+## $ url         &lt;chr&gt; &quot;https://www.ulta.com/trublend-matte-made-liquid-founda...
+## $ description &lt;chr&gt; &quot;Fair Porcelain L10  selected&quot;, &quot;Light Ivory L20&quot;, &quot;Gol...
+## $ imgSrc      &lt;chr&gt; &quot;https://images.ulta.com/is/image/Ulta/2537273sw?$tn$&quot;,...
+## $ imgAlt      &lt;chr&gt; &quot;Fair Porcelain L10&quot;, &quot;Light Ivory L20&quot;, &quot;Golden Ivory ...
+## $ name        &lt;chr&gt; &quot;Fair Porcelain&quot;, &quot;Light Ivory&quot;, &quot;Golden Ivory&quot;, &quot;Class...
+## $ specific    &lt;chr&gt; &quot;L10&quot;, &quot;L20&quot;, &quot;L30&quot;, &quot;L40&quot;, &quot;L50&quot;, &quot;L60&quot;, &quot;L70&quot;, &quot;L80&quot;,...
+## Rows: 4,371
+## Columns: 8
+## $ brand       &lt;chr&gt; &quot;FENTY BEAUTY by Rihanna&quot;, &quot;FENTY BEAUTY by Rihanna&quot;, &quot;...
+## $ product     &lt;chr&gt; &quot;Pro Filt&#39;r Soft Matte Powder Foundation&quot;, &quot;Pro Filt&#39;r ...
+## $ url         &lt;chr&gt; &quot;https://www.sephora.com/product/fenty-beauty-rihanna-p...
+## $ description &lt;chr&gt; &quot;100 for very fair skin with neutral undertones&quot;, &quot;105 ...
+## $ imgSrc      &lt;chr&gt; &quot;/productimages/sku/s2413342+sw.jpg&quot;, &quot;/productimages/s...
+## $ imgAlt      &lt;chr&gt; &quot;100 0.32 oz/ 9.1 g&quot;, &quot;105 0.32 oz/ 9.1 g&quot;, &quot;110 0.32 o...
+## $ name        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,...
+## $ specific    &lt;chr&gt; &quot;100&quot;, &quot;105&quot;, &quot;110&quot;, &quot;120&quot;, &quot;130&quot;, &quot;140&quot;, &quot;145&quot;, &quot;150&quot;,...
+## Rows: 6,816
+## Columns: 13
+## $ brand       &lt;chr&gt; &quot;Anastasia Beverly Hills&quot;, &quot;Anastasia Beverly Hills&quot;, &quot;...
+## $ product     &lt;chr&gt; &quot;Luminous Foundation&quot;, &quot;Luminous Foundation&quot;, &quot;Luminous...
+## $ url         &lt;chr&gt; &quot;https://www.ulta.com/luminous-foundation?productId=pim...
+## $ description &lt;chr&gt; &quot;355N (medium skin with a neutral golden undertone)  se...
+## $ imgSrc      &lt;chr&gt; &quot;https://images.ulta.com/is/image/Ulta/2551437sw?$tn$&quot;,...
+## $ imgAlt      &lt;chr&gt; &quot;355N (medium skin with a neutral golden undertone)&quot;, &quot;...
+## $ name        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,...
+## $ specific    &lt;chr&gt; &quot;355N&quot;, &quot;100N&quot;, &quot;110C&quot;, &quot;120W&quot;, &quot;130N&quot;, &quot;140N&quot;, &quot;150W&quot;,...
+## $ colorspace  &lt;chr&gt; &quot;RGB&quot;, &quot;RGB&quot;, &quot;RGB&quot;, &quot;RGB&quot;, &quot;RGB&quot;, &quot;RGB&quot;, &quot;RGB&quot;, &quot;RGB&quot;,...
+## $ hex         &lt;chr&gt; &quot;#A06F4A&quot;, &quot;#F1E7DB&quot;, &quot;#F0E7DB&quot;, &quot;#EFD0AE&quot;, &quot;#D5C1AA&quot;, ...
+## $ hue         &lt;dbl&gt; 25.81395, 32.72727, 34.28571, 31.38462, 32.09302, 30.00...
+## $ sat         &lt;dbl&gt; 0.3675214, 0.4400000, 0.4117647, 0.6701031, 0.3385827, ...
+## $ lightness   &lt;dbl&gt; 0.4588235, 0.9019608, 0.9000000, 0.8098039, 0.7509804, ...
+## Rows: 3,117
+## Columns: 9
+## $ brand       &lt;chr&gt; &quot;Makeup Revolution&quot;, &quot;HOURGLASS&quot;, &quot;TOM FORD&quot;, &quot;Armani B...
+## $ product     &lt;chr&gt; &quot;Conceal &amp; Define Full Coverage Foundation&quot;, &quot;Veil Flui...
+## $ name        &lt;chr&gt; NA, &quot;Porcelain&quot;, &quot;Pearl&quot;, NA, &quot;Pearl&quot;, NA, &quot;Porcelain&quot;,...
+## $ specific    &lt;chr&gt; &quot;F0&quot;, &quot;No. 0&quot;, &quot;0.0&quot;, &quot;0&quot;, &quot;0.0&quot;, &quot;0&quot;, &quot;0&quot;, &quot;N00&quot;, &quot;0.1...
+## $ lightness   &lt;dbl&gt; 0.9490196, 0.8176471, 0.8509804, 0.9117647, 0.9117647, ...
+## $ hex         &lt;chr&gt; &quot;#F2F2F2&quot;, &quot;#F6D3AB&quot;, &quot;#F0D8C2&quot;, &quot;#F0E8E1&quot;, &quot;#FDE5D4&quot;, ...
+## $ lightToDark &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, T...
+## $ numbers     &lt;dbl&gt; 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.10, 0...
+## $ id          &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1, 3, 5, 12, 9, 11, ...
+## Rows: 5,307
+## Columns: 9
+## $ brand      &lt;chr&gt; &quot;BECCA Cosmetics&quot;, &quot;BECCA Cosmetics&quot;, &quot;BECCA Cosmetics&quot;,...
+## $ product    &lt;chr&gt; &quot;Ultimate Coverage 24 Hour Foundation&quot;, &quot;Ultimate Covera...
+## $ url        &lt;chr&gt; &quot;https://www.ulta.com/ultimate-coverage-24-hour-foundati...
+## $ imgSrc     &lt;chr&gt; &quot;https://images.ulta.com/is/image/Ulta/2528173sw?$tn$&quot;, ...
+## $ name       &lt;chr&gt; &quot;shell&quot;, &quot;linen&quot;, &quot;alabaster&quot;, &quot;porcelain&quot;, &quot;ivory&quot;, &quot;sa...
+## $ categories &lt;chr&gt; &quot;gem&quot;, &quot;textile&quot;, &quot;gem&quot;, &quot;misc&quot;, &quot;gem, color&quot;, &quot;rock&quot;, &quot;...
+## $ specific   &lt;chr&gt; &quot;1W1&quot;, &quot;1N1&quot;, &quot;1C1&quot;, &quot;1N2&quot;, &quot;1C2&quot;, &quot;1W2&quot;, &quot;1N3&quot;, &quot;2W1&quot;, ...
+## $ hex        &lt;chr&gt; &quot;#EFCBA4&quot;, &quot;#F3CEB0&quot;, &quot;#F2CBB4&quot;, &quot;#F6C8A7&quot;, &quot;#F0C4AB&quot;, &quot;...
+## $ lightness  &lt;dbl&gt; 0.7901961, 0.8215686, 0.8274510, 0.8098039, 0.8058824, 0...</code></pre>
+<pre><code>## $ulta
+## # A tibble: 4,004 x 8
+##    brand  product    url          description  imgSrc     imgAlt  name  specific
+##    &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;        &lt;chr&gt;        &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   
+##  1 Cover~ TruBlend ~ https://www~ Fair Porcel~ https://i~ Fair P~ Fair~ L10     
+##  2 Cover~ TruBlend ~ https://www~ Light Ivory~ https://i~ Light ~ Ligh~ L20     
+##  3 Cover~ TruBlend ~ https://www~ Golden Ivor~ https://i~ Golden~ Gold~ L30     
+##  4 Cover~ TruBlend ~ https://www~ Classic Ivo~ https://i~ Classi~ Clas~ L40     
+##  5 Cover~ TruBlend ~ https://www~ Fair Beige ~ https://i~ Fair B~ Fair~ L50     
+##  6 Cover~ TruBlend ~ https://www~ Light Nude ~ https://i~ Light ~ Ligh~ L60     
+##  7 Cover~ TruBlend ~ https://www~ Natural Ivo~ https://i~ Natura~ Natu~ L70     
+##  8 Cover~ TruBlend ~ https://www~ True Ivory ~ https://i~ True I~ True~ L80     
+##  9 Cover~ TruBlend ~ https://www~ Classic Bei~ https://i~ Classi~ Clas~ L90     
+## 10 Cover~ TruBlend ~ https://www~ Golden Natu~ https://i~ Golden~ Gold~ M10     
+## # ... with 3,994 more rows
+## 
+## $sephora
+## # A tibble: 4,371 x 8
+##    brand   product    url         description    imgSrc   imgAlt  name  specific
+##    &lt;chr&gt;   &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   
+##  1 FENTY ~ Pro Filt&#39;~ https://ww~ 100 for very ~ /produc~ 100 0.~ &lt;NA&gt;  100     
+##  2 FENTY ~ Pro Filt&#39;~ https://ww~ 105 for very ~ /produc~ 105 0.~ &lt;NA&gt;  105     
+##  3 FENTY ~ Pro Filt&#39;~ https://ww~ 110 for very ~ /produc~ 110 0.~ &lt;NA&gt;  110     
+##  4 FENTY ~ Pro Filt&#39;~ https://ww~ 120 for fair ~ /produc~ 120 0.~ &lt;NA&gt;  120     
+##  5 FENTY ~ Pro Filt&#39;~ https://ww~ 130 for fair ~ /produc~ 130 0.~ &lt;NA&gt;  130     
+##  6 FENTY ~ Pro Filt&#39;~ https://ww~ 140 for light~ /produc~ 140 0.~ &lt;NA&gt;  140     
+##  7 FENTY ~ Pro Filt&#39;~ https://ww~ 145 for light~ /produc~ 145 0.~ &lt;NA&gt;  145     
+##  8 FENTY ~ Pro Filt&#39;~ https://ww~ 150 for light~ /produc~ 150 0.~ &lt;NA&gt;  150     
+##  9 FENTY ~ Pro Filt&#39;~ https://ww~ 160 for light~ /produc~ 160 0.~ &lt;NA&gt;  160     
+## 10 FENTY ~ Pro Filt&#39;~ https://ww~ 170 for light~ /produc~ 170 0.~ &lt;NA&gt;  170     
+## # ... with 4,361 more rows
+## 
+## $allShades
+## # A tibble: 6,816 x 13
+##    brand product url   description imgSrc imgAlt name  specific colorspace hex  
+##    &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;
+##  1 Anas~ Lumino~ http~ 355N (medi~ https~ 355N ~ &lt;NA&gt;  355N     RGB        #A06~
+##  2 Anas~ Lumino~ http~ 100N (very~ https~ 100N ~ &lt;NA&gt;  100N     RGB        #F1E~
+##  3 Anas~ Lumino~ http~ 110C (very~ https~ 110C ~ &lt;NA&gt;  110C     RGB        #F0E~
+##  4 Anas~ Lumino~ http~ 120W (very~ https~ 120W ~ &lt;NA&gt;  120W     RGB        #EFD~
+##  5 Anas~ Lumino~ http~ 130N (very~ https~ 130N ~ &lt;NA&gt;  130N     RGB        #D5C~
+##  6 Anas~ Lumino~ http~ 140N (fair~ https~ 140N ~ &lt;NA&gt;  140N     RGB        #DBC~
+##  7 Anas~ Lumino~ http~ 150W (fair~ https~ 150W ~ &lt;NA&gt;  150W     RGB        #EFC~
+##  8 Anas~ Lumino~ http~ 160C (fair~ https~ 160C ~ &lt;NA&gt;  160C     RGB        #DEC~
+##  9 Anas~ Lumino~ http~ 200W (ligh~ https~ 200W ~ &lt;NA&gt;  200W     RGB        #EDC~
+## 10 Anas~ Lumino~ http~ 210N (ligh~ https~ 210N ~ &lt;NA&gt;  210N     RGB        #E8C~
+## # ... with 6,806 more rows, and 3 more variables: hue &lt;dbl&gt;, sat &lt;dbl&gt;,
+## #   lightness &lt;dbl&gt;
+## 
+## $allNumbers
+## # A tibble: 3,117 x 9
+##    brand   product      name  specific lightness hex   lightToDark numbers    id
+##    &lt;chr&gt;   &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt; &lt;lgl&gt;         &lt;dbl&gt; &lt;dbl&gt;
+##  1 Makeup~ Conceal &amp; D~ &lt;NA&gt;  F0           0.949 #F2F~ TRUE            0       1
+##  2 HOURGL~ Veil Fluid ~ Porc~ No. 0        0.818 #F6D~ TRUE            0       2
+##  3 TOM FO~ Traceless S~ Pearl 0.0          0.851 #F0D~ TRUE            0       3
+##  4 Armani~ Neo Nude Fo~ &lt;NA&gt;  0            0.912 #F0E~ TRUE            0       4
+##  5 TOM FO~ Traceless F~ Pearl 0.0          0.912 #FDE~ TRUE            0       5
+##  6 Charlo~ Magic Found~ &lt;NA&gt;  0            0.731 #D9A~ TRUE            0       6
+##  7 Bobbi ~ Skin Weight~ Porc~ 0            0.822 #F3C~ TRUE            0       7
+##  8 Givenc~ Matissime V~ &lt;NA&gt;  N00          0.831 #F5D~ TRUE            0       8
+##  9 Smashb~ Studio Skin~ &lt;NA&gt;  0.1          0.814 #F8C~ TRUE            0.1     9
+## 10 Smashb~ Studio Skin~ &lt;NA&gt;  0.1          0.910 #F9E~ TRUE            0.1    10
+## # ... with 3,107 more rows
+## 
+## $allCategories
+## # A tibble: 5,307 x 9
+##    brand  product   url       imgSrc   name  categories specific hex   lightness
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;
+##  1 BECCA~ Ultimate~ https://~ https:/~ shell gem        1W1      #EFC~     0.790
+##  2 BECCA~ Ultimate~ https://~ https:/~ linen textile    1N1      #F3C~     0.822
+##  3 BECCA~ Ultimate~ https://~ https:/~ alab~ gem        1C1      #F2C~     0.827
+##  4 BECCA~ Ultimate~ https://~ https:/~ porc~ misc       1N2      #F6C~     0.810
+##  5 BECCA~ Ultimate~ https://~ https:/~ ivory gem, color 1C2      #F0C~     0.806
+##  6 BECCA~ Ultimate~ https://~ https:/~ sand  rock       1W2      #F2C~     0.782
+##  7 BECCA~ Ultimate~ https://~ https:/~ cash~ textile    1N3      #DFB~     0.708
+##  8 BECCA~ Ultimate~ https://~ https:/~ vani~ food       2W1      #EEC~     0.773
+##  9 BECCA~ Ultimate~ https://~ https:/~ bisq~ food       2C1      #EAB~     0.757
+## 10 BECCA~ Ultimate~ https://~ https:/~ cash~ food       2N1      #DDA~     0.708
+## # ... with 5,297 more rows</code></pre>
+<p>The <code>tuesdata</code> object contains 5 tibbles. Information about these tibbles are available the <a href="https://github.com/the-pudding/data/tree/master/foundation-names#allshadescsv--allshadesr">Pudding’s github page</a>.</p>
+<p>Let’s look at <code>allShades</code>, <code>allNumbers</code> and <code>allCategories</code> for now since these sets were ones that the authors did visualization on.</p>
+<pre class="r"><code>shade &lt;- tuesdata$allShades
+number &lt;- tuesdata$allNumbers
+category &lt;- tuesdata$allCategories</code></pre>
+<p>I will start by two questions:</p>
+<ol style="list-style-type: decimal">
+<li>What type of variation occurs within my variables?</li>
+<li>What type of variation occurs within my variables ?</li>
+</ol>
+<p>However, I am running out of time today and I haven’t even touched on my school works. Resume this on Thursday ?</p>
+<blockquote>
+<p>“There are no routine statistical questions, only questionable statistical routines”</p>
+<ul>
+<li>Sir David Cox</li>
+</ul>
+</blockquote>
+</div>

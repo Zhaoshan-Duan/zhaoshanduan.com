@@ -1,0 +1,58 @@
+# section information
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+#- name: Professional
+#  filter: "professional"
+- name: Academic
+  filter: "academic"
+- name: Independent
+  filter: "independent"
+
+# your projects
+projects:
+- name: Regression
+  logo: /images/sections/projects/linear-regression.png
+  role: Developer
+#  timeline: "Jun 2018 - Present"
+#  repo: https://github.com/tensorflow/tensorflow
+  #url: ""
+  summary: Housing prices prediction with Ames Housing dataset.
+  tags: ["machine-learning","academic","independent"]
+
+- name: Classification
+  logo: /images/sections/projects/classification.png
+  role: Developer
+#  timeline: "Jun 2019 - Present"
+#  repo: https://github.com/hossainemruz/toha
+  summary: Survivial rate prediction with Titanic dataset.
+  tags: ["machine-learning","academic","independent"]
+
+- name: Clustering
+  logo: /images/sections/projects/clustering.png
+  role: Developer
+#  timeline: "Jun 2019 - Present"
+#  repo: https://github.com/hossainemruz/toha
+#  summary: Survivial rate prediction with Titanic dataset.
+  tags: ["machine-learning","academic","independent"]
+
+
+
+- name: Data Analytics
+  logo: /images/sections/projects/da.png
+  role: Contributor
+#  timeline: "March 2018 - Present"
+#  repo: https://github.com/kubernetes/kubernetes # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+#  summary: Production-Grade Container Scheduling and Management.
+  tags: ["independent"]

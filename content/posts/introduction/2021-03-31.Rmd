@@ -1,0 +1,39 @@
+---
+title: "First Blog"
+author: "Zhaoshan Duan"
+date: "2021-03-31"
+output:
+  blogdown::html_page
+header-includes:
+  \usepackage{emo}
+categories: ["Blog"]
+menu:
+  sidebar:
+    name: Introduction
+    identifier: introduction
+    weight: 10
+---
+
+This is my first blog written with `blogdown`.
+
+My personal blog website is built with Hugo and deployed with Netlify `r emo::ji("smile")` . To write with `blogdown`, I am using [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/) by Yihui Xie, Amber Thomas, Alison Presmanes Hill. I am self-aware enough that the primary and the only audience of this blog site will be myself. I do however still find it interesting to keep track of my progress, and re-examine myself from a "third-person" standpoint.
+
+I decided to create a personal blog site to serve the following purposes:
+
+-   **Blog** gives me an opportunity to test out whatever I found interesting in the realms of Machine Learning and Deep Learning. I hope to explore in both R and Python. However, I have yet to figure out how to use the `reticulate` package to embed a Python session in Rstudio. A bit of free writing may be included as well both as a mean to practice my writing skill and to have my sanity in-check `r emo::ji("cold")` . It serves as a progress tracker as well.
+
+-   **Portfolio** showcases my independent projects for potential employers. Still need to think about how to structure this page.
+
+-   **Creative** will be populated once I gained enough confident in uploading my guitar playing. `r emo::ji("silly")`
+
+-   Overall, the blog site aims at improving and expanding my technical skills outside my M.S. Program.
+
+Originally, riding on the excitement of deploying the site successfully, I was planning to update the blog three times as week. Then I realize that I should stop lying to myself. So currently I am planning to write a new blog post once a week.
+
+The blog would be exploring [\#TidyTuesday](https://twitter.com/search?q=%23tidytuesday&src=typed_query) data sets and test out some code from [Tidy Modeling with R.](https://www.tmwr.org/) as well as from the personal blog website of [Julia Silge](https://juliasilge.com/) and other R giants' work. I will be messing with Python too. However, since all of my knowledge of Python are self-taught, I will focus more on the algorithm and data structure practices.s
+
+I have decided to use as many emojis as possible in these informal blogs to compensate my seemingly lack on emotions when writing these blogs. The fine line between professionalism and casualness is at times hard to walk through for a Nonresident Alien `r emo::ji("alien")` like myself - an official title that was given to me by USCIS.
+
+> Slow, steady progress is better than daily excuses.
+>
+> \- Robin Sharma
