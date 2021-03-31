@@ -1,0 +1,42 @@
+---
+title: 'EDA on #TidyTuesday Makeup Shades Data'
+author: "Zhaoshan Duan"
+date: "2021-03-30"
+output: 
+  blogdown::html_page
+header-includes:
+  \usepackage{emo} 
+categories:
+  - rstats
+  - tidymodels
+tags: 
+  - rstats 
+  - TidyTuesday
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>Since this is my first technical post, the goal right now is to get comfortable with, essentially including “codes” in my blog posts. I would like to get familiar with exploratory data analysis using this week’s <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-03-30/readme.md">#TidyTuesday dasta set</a> on Makeup Shades. This data comes from <a href="https://pudding.cool/">The Pudding</a>, with a corresponding <a href="https://pudding.cool/2021/03/foundation-names/">article</a> as well as a <a href="https://github.com/the-pudding/data/tree/master/foundation-names">github repository</a>.</p>
+<p><strong><em>Self-reflection:</em></strong> I do have to admit that, as a second-semester graduate students in Data Science with some knowledge of data wrangling in R, I am definitely not yet comfortable with exploratory analysis both from high level understanding and low level syntax.</p>
+<p>Exploratory data analysis is an iterative cycle with flexible rules. Now I realize that it requires more creative thinking than I thought as I write this post. I lately resumed my daily work and started to listen to the DataFramed Podcast. Interestingly, this realization of EDA resonates with a segment of what a great Data Scientist is in an episode with Hilary Mason:</p>
+<blockquote>
+<p>“… framing the questions is where the challenge is… (A great Data Scientist) it’s not about whose math is the hardest math, it’s really about, ‘How do I get to a robust problem definition that I can solve, that will actually give someone an insight they didn’t otherwise have?’” Hilary Mason (DataFramed - Episode 1, 2018)</p>
+</blockquote>
+<p>(Or Does it? I’m not sure. My opinion about this is based on my current level of knowledge and understanding of the Data Science discipline. It would be interesting for future me to read about this opinion again if we made it into the field. )</p>
+<p>This may correlates</p>
+<p>Therefore, I am deliberately following suggestions from <a href="https://r4ds.had.co.nz/exploratory-data-analysis.html">R for Data Science</a> for this post.</p>
+<p>First, let’s get the data. I will be focusing on the aggregated data sets <code>allShades.csv</code>, <code>allNumbers.csv</code> and <code>allCategories.csv</code> .</p>
+<pre class="r"><code>tuesdata &lt;- tidytuesdayR::tt_load(2021, week = 14)</code></pre>
+<pre><code>## 
+##  Downloading file 1 of 5: `ulta.csv`
+##  Downloading file 2 of 5: `sephora.csv`
+##  Downloading file 3 of 5: `allShades.csv`
+##  Downloading file 4 of 5: `allNumbers.csv`
+##  Downloading file 5 of 5: `allCategories.csv`</code></pre>
+<blockquote>
+<p>“There are no routine statistical questions, only questionable statistical routines”</p>
+<ul>
+<li>Sir David Cox</li>
+</ul>
+</blockquote>

@@ -1,9 +1,10 @@
-baseURL = "/"
+title = "Zhaoshan Duan"
+baseURL = "https://zhaoshanduan.com/"
 languageCode = "en"
 DefaultContentLanguage = "en"
-title = "Website of Zhaoshan Duan"
 theme = "anatole"
 summarylength = 10
+copyright = "&copy; Julia Silge {year}"
 enableEmoji = true
 enableRobotsTXT = true
 
