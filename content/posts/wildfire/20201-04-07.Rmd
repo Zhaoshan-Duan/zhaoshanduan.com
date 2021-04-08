@@ -1,0 +1,32 @@
+---
+title: "Machine Learning and Wildfire"
+author: "Zhaoshan Duan"
+date: "2021-04-07"
+header-includes:
+  \usepackage{emo}
+menu:
+  sidebar:
+    name: Wildfire
+    identifier: wildfire
+    weight: 10
+categories: ["Blog"]
+output: html_document
+---
+
+```{r echo=FALSE}
+library(emo)
+```
+
+This is first my passion project.
+
+My interest in wildfire management came around 2017. I was visiting a friend in Los Angeles during the winter of 2017 and I drove pass, what I only know now, the outskirt of Thomas fire. The sight of what I saw that day was forever imprinted in my memory. It's hard to describe my feelings and I don't want to reduce them into words such as "dread" and "fear". I think the best imagery expression of what I felt at that time would be of the works of the late dystopian surrealist painter [Zdzislaw Beksiński](https://www.wikiart.org/en/zdzislaw-beksinski). I thought about helping out the cause of wildfire fighting but I did not act. I was too distracted by my OPT, a possible career in political campaign, preparation for LSAT and application for law schools.
+
+Then here comes 2020.
+
+For many, 2020 was a dreadful year due to the pandemic. It was difficult for me too especially in the mental health department. However, the year also marks the beginning of my journey on finally pursuing my passion, studying and doing I like, and reflect on my life: I became a student of Statistics and Data Science. I started to take care of my diets and exercises systematically. I acknowledged that I smoke because of nostalgia and quit. I picked up guitar again as my creative outputs. I started taking daily walks. I forgot about wildfires and paid attentions only to anything related to data science, R, Python and Machine Learning, Then after a night of rare thunderstorms, August Complex Fire reignited the idea of helping out the cause of wildfire management and prevention. But this time with technology.
+
+Let's see where this will take me.
+
+> *I wish to paint in such a manner as if I were photographing dreams*
+>
+> \- Zdzisław Beksiński

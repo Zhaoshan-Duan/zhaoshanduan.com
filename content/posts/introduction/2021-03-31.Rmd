@@ -34,6 +34,6 @@ The blog would be exploring [\#TidyTuesday](https://twitter.com/search?q=%23tidy
 
 I have decided to use as many emojis as possible in these informal blogs to compensate my seemingly lack on emotions when writing these blogs. The fine line between professionalism and casualness is at times hard to walk through for a Nonresident Alien `r emo::ji("alien")` like myself - an official title that was given to me by USCIS.
 
-> Slow, steady progress is better than daily excuses.
+> *Slow, steady progress is better than daily excuses.*
 >
 > \- Robin Sharma
