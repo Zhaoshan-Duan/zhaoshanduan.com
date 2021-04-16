@@ -1,4 +1,7 @@
 /* This is empty CSS file intended to be overwritten by user's custom CSS file */
+body {
+  font-family:'Playfair Display', serif;
+}
 
 /* ============= Device specific fixes ======= */
 

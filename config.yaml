@@ -1,6 +1,6 @@
 baseURL: https://zhaoshanduan.com/
-
 languageCode: en-us
+defaultContentLanguage: en
 title: "Zhaoshan Duan"
 theme: "toha"
 
@@ -11,8 +11,16 @@ languages:
     languageName: English
     weight: 1
 #  ch:
-#    LanguageName: Chinese
-#    weight: 3
+#    LanguageName: 中文
+#    weight: 2
+
+# At least HTML and JSON are required for the main HTML content and
+# client-side JavaScript search
+outputs:
+  home:
+  - HTML
+  - RSS
+  - JSON
 
 # Control TOC depth and allow raw html in markdown file
 markup:
@@ -24,24 +32,21 @@ markup:
     endLevel: 6
     ordered: false
 
-# At least HTML and JSON are required for the main HTML content and
-# client-side JavaScript search
-outputs:
-  home:
-  - HTML
-  - RSS
-  - JSON
-
 # Enable Google Analytics
-googleAnalytics: UA-122321624-2
+googleAnalytics: G-8DDPXZQE1K
 
 # Enable global emoji support
 enableEmoji: true
 
+# ignore these types of files
+ignore:
+  - "*.Rmd"
+
 # Site parameters
 params:
   # Background image of the landing page
-  background: /images/site/beach2.jpg
+  # background: /images/site/cool-background.png
+  background: /images/site/keyboard.jpg
 
   # GitHub repo URL of your site
   gitRepo: https://github.com/Zhaoshan-Duan/zhaoshanduan.com
@@ -65,7 +70,7 @@ params:
   # Provide newsletter configuration. This feature hasn't been implemented yet.
   # Currently, you can just hide it from the footer.
   newsletter:
-    enable: false
+    enable: true
 
 # Configure Notes property
   notes:

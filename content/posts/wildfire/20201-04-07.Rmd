@@ -11,6 +11,7 @@ menu:
     weight: 10
 categories: ["Blog"]
 output: html_document
+draft: true
 ---
 
 ```{r echo=FALSE}
@@ -24,6 +25,9 @@ My interest in wildfire management came around 2017. I was visiting a friend in 
 Then here comes 2020.
 
 For many, 2020 was a dreadful year due to the pandemic. It was difficult for me too especially in the mental health department. However, the year also marks the beginning of my journey on finally pursuing my passion, studying and doing I like, and reflect on my life: I became a student of Statistics and Data Science. I started to take care of my diets and exercises systematically. I acknowledged that I smoke because of nostalgia and quit. I picked up guitar again as my creative outputs. I started taking daily walks. I forgot about wildfires and paid attentions only to anything related to data science, R, Python and Machine Learning, Then after a night of rare thunderstorms, August Complex Fire reignited the idea of helping out the cause of wildfire management and prevention. But this time with technology.
+
+
+
 
 Let's see where this will take me.
 

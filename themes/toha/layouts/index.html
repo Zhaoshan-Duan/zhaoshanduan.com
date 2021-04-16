@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><link rel="preconnect" href="https://fonts.gstatic.com">
     <title>{{- .Site.Title -}}</title>
     {{ $siteDescription := .Site.Params.description }}
     {{ if (index .Site.Data .Site.Language.Lang).site }}
@@ -10,7 +10,7 @@
       {{ end }}
     {{ end }}
     <meta name="description" content="{{ $siteDescription }}" />
-    
+
     <!-- import common headers -->
     {{- partial "header.html" . -}}
 
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{ "/css/sections/recent-posts.css" | relURL }}"/>
     <link rel="stylesheet" href="{{ "/css/sections/achievements.css" | relURL }}"/>
     <link rel="stylesheet" href="{{ "/css/sections/accomplishments.css" | relURL }}"/>
-    
+
     <!-- Add Google Analytics if enabled in configuration -->
     {{ if site.GoogleAnalytics }}
         {{ template "_internal/google_analytics_async.html" . }}
