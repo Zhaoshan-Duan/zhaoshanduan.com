@@ -11,7 +11,7 @@ menu:
     weight: 10
 categories: ["Blog"]
 output: html_document
-draft: true
+draft: false
 ---
 
 ```{r echo=FALSE}
