@@ -24,19 +24,19 @@ projects:
 - name: Regression
   logo: /images/sections/projects/linear-regression.png
   role: Developer
-#  timeline: "Jun 2018 - Present"
-#  repo: https://github.com/tensorflow/tensorflow
+  timeline: "April 2021 - Present"
+  repo: https://github.com/Zhaoshan-Duan/Ames-Housing
   #url: ""
   summary: Housing prices prediction with Ames Housing dataset.
-  tags: ["machine-learning","academic","independent"]
+  tags: ["machine-learning","academic"]
 
 - name: Classification
   logo: /images/sections/projects/classification.png
   role: Developer
-#  timeline: "Jun 2019 - Present"
-#  repo: https://github.com/hossainemruz/toha
+  timeline: "March 2021"
+  repo: https://github.com/Zhaoshan-Duan/titanic
   summary: Survivial rate prediction with Titanic dataset.
-  tags: ["machine-learning","academic","independent"]
+  tags: ["machine-learning","academic"]
 
 - name: Clustering
   logo: /images/sections/projects/clustering.png
