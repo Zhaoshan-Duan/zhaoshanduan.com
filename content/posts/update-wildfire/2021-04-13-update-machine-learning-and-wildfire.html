@@ -2,11 +2,15 @@
 title: 'Update: Machine Learning and Wildfire'
 author: Zhaoshan Duan
 date: '2021-04-13'
-slug: []
 categories:
   - Blog
 tags: []
 hero: /images/background/sunrise.jpg
+menu:
+  sidebar:
+    name: Update:Wildfire
+    identifier: up:wildfire
+    weight: 8
 ---
 
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
@@ -14,5 +18,26 @@ hero: /images/background/sunrise.jpg
 
 <div id="research-on-research-direction" class="section level1">
 <h1>Research on Research Direction</h1>
-<p>After good four days of researching and reading scholarly articles on wildfire science and machine learning, I came across a</p>
+<p>After good four days of reading scholarly articles on wildfire science and machine learning, I came across a great article title <a href="https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg52"><em>A review of machine learning applications in wildfire science and management</em></a> published in Environmental Reviews. The article is quite long but worth the time to read if one is interested in knowing the current state of the research space in wildfire science and machine learning.</p>
+<p>I like every parts of the article, and the section that helped me the most was <strong>Opportunity</strong> section. The authors listed out a series of ML advances in other areas of environmental science that have analogous problems in wildland fire science and that may be useful for identifying further ML applications. This is also where I get my current research direction. I am going to list out some other opportunities here for future references (Mostly for my personal projects if I can find the time).</p>
+<div id="other-opportunities" class="section level2">
+<h2>Other Opportunities</h2>
+<p><a href="https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg182">J. Li et al. (2011)</a> compared ML algorithms for spatial interpolation and found that a RF model combined with geostatistical methods yielded good results</p>
+<ul>
+<li>a similar method could be used to improve interpolation of fire weather observations from weather stations and so enhance fire danger monitoring</li>
+</ul>
+<p><a href="https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg344">Rasp and Lerch (2018)</a> showed that ANNs could improve weather forecasts by post-processing ensemble forecasts, an approach that could similarly be applied to improve short-term forecasts of fire weather.</p>
+<p><a href="https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg52">Belayneh et al. (2014)</a> used ANNs and SVMs combined with wavelet transforms for long-term drought forecasting in Ethiopia; such methods could also be useful for forecasting drought in the context of fire danger potential.</p>
+<p>In the context of numerical weather prediction, <a href="https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg188">Cohen et al. (2019)</a> found better predictability using ML methods than dynamical models for subseasonal to seasonal weather forecasting, suggesting similar applications for long-term fire weather forecasting.</p>
+<p><a href="https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg24">McGovern et al. (2017)</a> discussed how AI techniques can be leveraged to improve decision-making around high-impact weather.</p>
+<p><a href="https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg231">Reichstein et al. (2019)</a> have further argued for the use of DL in the environmental sciences, citing its potential to extract spatiotemporal features from large geospatial datasets.</p>
+<p><a href="https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg259">Kussul et al. (2017)</a> used CNNs to classify land cover and crop types and found that CNNs improved the results over standard ANN models; a similar approach could be used for fuels classification, which is an important input to fire behavior prediction models.</p>
+<p><a href="https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg247">Shi et al. (2016)</a> also used CNNs to detect clouds in remotely sensed imagery and were able to differentiate between thin and thick clouds.</p>
+<ul>
+<li>A similar approach could be used for smoke detection, which is important for fire detection, as well as in determining the presence of false negatives in hotspot data (due to smoke or cloud obscuration).</li>
+</ul>
+<p>Recent proposals have called for hybrid models that combine process-based models and ML methods (<a href="https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg231">Reichstein et al. 2019</a>).</p>
+<p>ML models may replace user-specified parameterizations in numerical weather prediction models (<a href="https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg57">Brenowitz and Bretherton 2018</a>).</p>
+<p>ML methods to determine the solutions to nonlinear partial differential equations (<a href="https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg245">Raissi and Karniadakis 2018</a>; <a href="https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg297">Raissi et al. 2019</a>).</p>
+</div>
 </div>
