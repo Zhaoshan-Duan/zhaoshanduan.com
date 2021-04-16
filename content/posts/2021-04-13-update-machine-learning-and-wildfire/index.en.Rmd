@@ -1,0 +1,17 @@
+---
+title: 'Update: Machine Learning and Wildfire'
+author: Zhaoshan Duan
+date: '2021-04-13'
+slug: []
+categories:
+  - Blog
+tags: []
+hero: /images/background/sunrise.jpg
+---
+
+
+
+# Research on Research Direction
+
+After good four days of researching and reading scholarly articles on wildfire science and machine learning, I came across a 
+
