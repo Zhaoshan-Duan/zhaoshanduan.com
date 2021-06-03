@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Machine Learning and Wildfire</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hua220d01a4e2853ebb932ba725a4f0063_3036_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="Machine Learning and Wildfire" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-8DDPXZQE1K', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/joshua_tree_huda9d56a44a3a379b64383fa4ebb7720a_34029_42x0_resize_box_2.png" alt="Logo">Zhaoshan Duan</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/joshua_tree_huda9d56a44a3a379b64383fa4ebb7720a_34029_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/site/joshua_tree_huda9d56a44a3a379b64383fa4ebb7720a_34029_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="https://zhaoshanduan.com/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/update-wildfire/2021-04-13-update-machine-learning-and-wildfire/">Update:Wildfire</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/2021-03-31/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/wildfire/20201-04-07/">Wildfire</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://zhaoshanduan.com/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/masked.png' alt="Author Image">
+          <h5 class="author-name">Zhaoshan Duan</h5>
+          <p>April 7, 2021</p>
+        </div>
+
+        <div class="title">
+          <h1>Machine Learning and Wildfire</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="background" class="section level1">
+<h1>Background</h1>
+<p>This is first my passion project.</p>
+<p>My interest in wildfire management came around 2017. I was visiting a friend in Los Angeles during the winter of 2017 and I drove pass, what I only know now, the outskirt of Thomas fire. The sight of what I saw that day was forever imprinted in my memory. It’s hard to describe my feelings and I don’t want to reduce them into words such as “dread” and “fear”. I think the best imagery expression of what I felt at that time would be of the works of the late dystopian surrealist painter <a href="https://www.wikiart.org/en/zdzislaw-beksinski">Zdzislaw Beksiński</a>. I thought about helping out the cause of wildfire fighting but I did not act. I was too distracted by my OPT, a possible career in political campaign, preparation for LSAT and application for law schools.</p>
+<p>Then here comes 2020.</p>
+<p>For many, 2020 was a dreadful year due to the pandemic. It was difficult for me too especially in the mental health department. However, the year also marks the beginning of my journey on finally pursuing my passion, studying and doing I like, and reflect on my life so far: I became a student of Statistics and Data Science. I started to take care of my diets and exercises systematically. I acknowledged that I smoke because of nostalgia and quit. I picked up guitar again as my creative outputs. I started taking daily walks. I forgot about wildfires and paid attentions only to anything related to data science, R, Python and Machine Learning, Then after a night of rare thunderstorms, August Complex Fire reignited the idea of helping out the cause of wildfire management and prevention. But this time with technology.</p>
+<p>Coincidentally, an email from my school regarding a possible research opportunity at Lawrence Berkeley Lab motivated me even more. I think my research of interest aligns with what the program requires but I am not yet sure the specific direction I want to go. While my chances of getting into the program maybe slight since my background is weak and Lawrence Berkeley Lab is a highly reputable organization, I think I would still give it a shot. More knowledge never hurt.</p>
+<p>Time to do read up on wildfire science and machine learning methods. Let’s see what I can do.</p>
+<p>Let’s see where this will take me.</p>
+<blockquote>
+<p><em>I wish to paint in such a manner as if I were photographing dreams</em></p>
+<p>- Zdzisław Beksiński</p>
+</blockquote>
+</div>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/Zhaoshan-Duan/zhaoshanduan.com/edit/source/content/posts%5cwildfire%5c20201-04-07.html">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/update-wildfire/2021-04-13-update-machine-learning-and-wildfire/" class="btn btn-outline-info">
+          <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+          <div class="next-prev-text">Update: Machine Learning and Wildfire</div>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/introduction/2021-03-31/" class="btn btn-outline-info">
+            <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+            <div class="next-prev-text">First Blog</div>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="/#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>joshua.duan47@gmail.com</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2021 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

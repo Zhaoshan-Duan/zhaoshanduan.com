@@ -1,0 +1,11 @@
+name = "joshua"
+
+google_fonts = "Playfair+Display:400,400i|Raleway:400,700|Roboto+Mono"
+
+heading_font = "Playfair Display"
+body_font = "Raleway"
+nav_font = "Raleway"
+mono_font = "Roboto Mono"
+
+font_size = "18"
+font_size_small = "16"

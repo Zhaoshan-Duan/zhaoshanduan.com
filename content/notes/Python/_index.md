@@ -4,6 +4,5 @@ menu:
   notes:
     name: Python
     identifier: notes-python
-    weight: 20
+    weight: 10
 ---
-# Python Notes

@@ -4,11 +4,18 @@ copyright: © 2021 Copyright.
 # Meta description for your site.  This will help the search engines to find your site.
 description: Portfolio and personal blog of Zhaoshan Duan.
 
-# specify the list of custom menus that you want to show in the top navbar.
-# they will be separated by a divider from the main menus.
+# specify the list of custom menus that you want to show in the top navbar.they will be separated by a divider from the main menus.
 customMenus:
-  - name: Notes
-  - url: /notes
+- name: Notes
+  url: /notes
 
   #- name: Docs
   #  url: https://zhaoshanduan.com/posts/
+
+# Specify OpenGraph Headers
+openGraph:
+  title: Zhaoshan's Blog and Portfolio
+  type: website
+  description: Portfolio and personal blog of Zhaoshan Duan.
+  image: images/author/masked.png
+  url: https://zhaoshanduan.com/

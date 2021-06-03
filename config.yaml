@@ -1,4 +1,5 @@
 baseURL: https://zhaoshanduan.com/
+
 languageCode: en-us
 defaultContentLanguage: en
 title: "Zhaoshan Duan"
@@ -14,14 +15,6 @@ languages:
 #    LanguageName: 中文
 #    weight: 2
 
-# At least HTML and JSON are required for the main HTML content and
-# client-side JavaScript search
-outputs:
-  home:
-  - HTML
-  - RSS
-  - JSON
-
 # Control TOC depth and allow raw html in markdown file
 markup:
   goldmark:
@@ -31,6 +24,14 @@ markup:
     startLevel: 2
     endLevel: 6
     ordered: false
+
+# At least HTML and JSON are required for the main HTML content and
+# client-side JavaScript search
+outputs:
+  home:
+  - HTML
+  - RSS
+  - JSON
 
 # Enable Google Analytics
 googleAnalytics: G-8DDPXZQE1K
@@ -46,12 +47,7 @@ ignore:
 params:
   # Background image of the landing page
   # background: /images/site/cool-background.png
-  background: /images/site/keyboard.jpg
-
-  # GitHub repo URL of your site
-  gitRepo: https://github.com/Zhaoshan-Duan/zhaoshanduan.com
-  # Default branch of your Git repo
-  gitBranch: source
+  background: /images/site/dark_background.jpg
 
   # Provide logos for your site. The inverted logo will be used in the initial
   # transparent navbar and the main logo will be used in the non-transparent navbar.
@@ -60,6 +56,18 @@ params:
     main: /images/site/joshua_tree.png
     inverted: /images/site/joshua_tree.png
     favicon: /images/site/favicon.png
+
+  # GitHub repo URL of your site
+  gitRepo: https://github.com/Zhaoshan-Duan/zhaoshanduan.com
+  # Default branch of your Git repo
+  gitBranch: source
+
+  # Configure Notes property
+  notes:
+    # Set a background color of note card header. Use any CSS color code/name.
+    headerBackground: aliceblue
+    # Set note card title color.
+    headerTextColor: #1c2d41
 
   # specify whether you want to write some blog posts or not
   enableBlogPost: true
@@ -70,11 +78,4 @@ params:
   # Provide newsletter configuration. This feature hasn't been implemented yet.
   # Currently, you can just hide it from the footer.
   newsletter:
-    enable: true
-
-# Configure Notes property
-  notes:
-    # Set a background color of note card header. Use any CSS color code/name.
-    headerBackground: aliceblue
-    # Set note card title color.
-    headerTextColor: #1c2d41
+    enable: false
