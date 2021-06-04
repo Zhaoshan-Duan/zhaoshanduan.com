@@ -79,3 +79,5 @@ params:
   # Currently, you can just hide it from the footer.
   newsletter:
     enable: false
+
+custom_css: "css/custom.css"

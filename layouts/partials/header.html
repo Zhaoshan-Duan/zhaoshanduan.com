@@ -33,5 +33,9 @@
 <!--================= custom style overrides =========================-->
 <!--=== <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}"/> -->
 
+{{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{- end }}
+
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
