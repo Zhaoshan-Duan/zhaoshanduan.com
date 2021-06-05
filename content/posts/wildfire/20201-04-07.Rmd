@@ -20,19 +20,47 @@ library(emo)
 
 # Background
 
-This is first my passion project.
+My interest in wildfire management came around 2017. I was visiting a friend in Los Angles and I drove pass, what I only found out later, the outskirt of Thomas fire. The sight was forever imprinted in my memory. It's difficult to describe my feelings and I don't want to reduce them into words such as "dread" and "fear". I think the best imagery expression of what I felt at that time would be of the works of the late dystopian surrealist painter [Zdzislaw Beksiński](https://www.wikiart.org/en/zdzislaw-beksinski). I thought about helping out the cause of wildfire fighting but I did not act. I was too distracted by my OPT, a possible career in political campaign, preparation for LSAT and application for law schools.
 
-My interest in wildfire management came around 2017. I was visiting a friend in Los Angeles during the winter of 2017 and I drove pass, what I only know now, the outskirt of Thomas fire. The sight of what I saw that day was forever imprinted in my memory. It's hard to describe my feelings and I don't want to reduce them into words such as "dread" and "fear". I think the best imagery expression of what I felt at that time would be of the works of the late dystopian surrealist painter [Zdzislaw Beksiński](https://www.wikiart.org/en/zdzislaw-beksinski). I thought about helping out the cause of wildfire fighting but I did not act. I was too distracted by my OPT, a possible career in political campaign, preparation for LSAT and application for law schools.
-
-Then here comes 2020.
-
-For many, 2020 was a dreadful year due to the pandemic. It was difficult for me too especially in the mental health department. However, the year also marks the beginning of my journey on finally pursuing my passion, studying and doing I like, and reflect on my life so far: I became a student of Statistics and Data Science. I started to take care of my diets and exercises systematically. I acknowledged that I smoke because of nostalgia and quit. I picked up guitar again as my creative outputs. I started taking daily walks. I forgot about wildfires and paid attentions only to anything related to data science, R, Python and Machine Learning, Then after a night of rare thunderstorms, August Complex Fire reignited the idea of helping out the cause of wildfire management and prevention. But this time with technology.
+Then comes 2020. I became a student of Statistics and Data Science, and took up the habit of daily walks due to the pandemic. After a night of rare thunderstorms, August Complex Fire reignited the idea of helping out the cause of wildfire management and prevention.
 
 Coincidentally, an email from my school regarding a possible research opportunity at Lawrence Berkeley Lab motivated me even more. I think my research of interest aligns with what the program requires but I am not yet sure the specific direction I want to go. While my chances of getting into the program maybe slight since my background is weak and Lawrence Berkeley Lab is a highly reputable organization, I think I would still give it a shot. More knowledge never hurt.
 
-Time to do read up on wildfire science and machine learning methods. Let's see what I can do.
+# Research Direction
 
-Let's see where this will take me.
+After good four days of reading scholarly articles on wildfire science and machine learning, I came across a great article title [*A review of machine learning applications in wildfire science and management*](https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg52) published in Environmental Reviews. The article is quite long but worth the time to read if one is interested in knowing the current state of the research in wildfire science and machine learning.
+
+I like every parts of the article, and the section that helped me the most was **Opportunity** section. The authors listed out a series of ML advances in other areas of environmental science that have analogous problems in wildland fire science and that may be useful for identifying further ML applications. This is also where I get my current research direction. I am going to list out some other opportunities here for future references (Mostly for my personal projects if I can find the time).
+
+## Other Opportunities
+
+[J. Li et al. (2011)](https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg182) compared ML algorithms for spatial interpolation and found that a RF model combined with geostatistical methods yielded good results
+
+-   a similar method could be used to improve interpolation of fire weather observations from weather stations and so enhance fire danger monitoring
+
+[Rasp and Lerch (2018)](https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg344) showed that ANNs could improve weather forecasts by post-processing ensemble forecasts, an approach that could similarly be applied to improve short-term forecasts of fire weather.
+
+[Belayneh et al. (2014)](https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg52) used ANNs and SVMs combined with wavelet transforms for long-term drought forecasting in Ethiopia; such methods could also be useful for forecasting drought in the context of fire danger potential.
+
+In the context of numerical weather prediction, [Cohen et al. (2019)](https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg188) found better predictability using ML methods than dynamical models for subseasonal to seasonal weather forecasting, suggesting similar applications for long-term fire weather forecasting.
+
+[McGovern et al. (2017)](https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg24) discussed how AI techniques can be leveraged to improve decision-making around high-impact weather.
+
+[Reichstein et al. (2019)](https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg231) have further argued for the use of DL in the environmental sciences, citing its potential to extract spatiotemporal features from large geospatial datasets.
+
+[Kussul et al. (2017)](https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg259) used CNNs to classify land cover and crop types and found that CNNs improved the results over standard ANN models; a similar approach could be used for fuels classification, which is an important input to fire behavior prediction models.
+
+[Shi et al. (2016)](https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg247) also used CNNs to detect clouds in remotely sensed imagery and were able to differentiate between thin and thick clouds.
+
+-   A similar approach could be used for smoke detection, which is important for fire detection, as well as in determining the presence of false negatives in hotspot data (due to smoke or cloud obscuration).
+
+Recent proposals have called for hybrid models that combine process-based models and ML methods ([Reichstein et al. 2019](https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg231)).
+
+ML models may replace user-specified parameterizations in numerical weather prediction models ([Brenowitz and Bretherton 2018](https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg57)).
+
+ML methods to determine the solutions to nonlinear partial differential equations ([Raissi and Karniadakis 2018](https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg245); [Raissi et al. 2019](https://cdnsciencepub.com/doi/full/10.1139/er-2020-0019#refg297)).
+
+Time to do read up on wildfire science and machine learning methods. Let's see where this will take me.
 
 > *I wish to paint in such a manner as if I were photographing dreams*
 >
