@@ -2,6 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-.Rdata
-.httr-oauth
 .DS_Store
+exampleSite/public/
+exampleSite/resources/
