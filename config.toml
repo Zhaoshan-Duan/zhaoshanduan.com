@@ -1,7 +1,7 @@
-baseURL = "/"
+baseURL = "http://www.zhaoshanduan.com/"
 theme = "hugo-apero"
 languageCode = "en"
-title = "Zhaoshan Duan"
+title = ""
 author = "Zhaoshan Duan"
 copyright = "" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
@@ -30,10 +30,10 @@ enableEmoji = true
 [params]
   orgName = ""
   orgLocal = ""
-  description = "A modern, beautiful, and easily configurable blog theme for Hugo."
-  favicon = "/img/favicon.ico"
-  logo = "/img/blogophonic-mark-dark.png"
-  mainSections = ["blog", "project", "resume"]
+  description = "I don't want to go into law shcool."
+  favicon = "/img/mountains_logo.png"
+  logo = "/img/mountains_logo.png"
+  mainSections = ["blog", "project", "resume", "talks"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -43,12 +43,12 @@ enableEmoji = true
   # Place image file in `static` folder and specify image name here.
   sharing_image = "/img/papillons.jpg"
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
-  twitter = "apreshill"
+  twitter = "JoshuaDuan47"
   
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
   #         poppy / sky / violet / water 
-  theme = "violet"
+  theme = "plum"
   
   # or, leave theme empty & make your own palette
   # see docs at https://hugo-apero.netlify.app/blog/color-themes/
@@ -136,11 +136,11 @@ enableEmoji = true
     title = "Project Portfolio"
     url = "/project/"
     weight = 3
-  # [[menu.header]]
-  #  name = "Talks"
-  #  title = "Talks"
-  #  url = "/talk/"
-  #  weight = 4
+   [[menu.header]]
+    name = "Talks"
+    title = "Talks"
+    url = "/talk/"
+    weight = 4
   # [[menu.header]]
   #  name = "A collection"
   #  title = "A collection"
