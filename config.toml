@@ -1,7 +1,7 @@
 baseURL = "http://www.zhaoshanduan.com/"
 theme = "hugo-apero"
 languageCode = "en"
-title = ""
+title = "Zhaoshan Duan"
 author = "Zhaoshan Duan"
 copyright = "" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
@@ -13,6 +13,11 @@ paginate = 5
 preserveTaxonomyNames = true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 enableEmoji = true
+
+# Permalinks
+[permalinks]
+  blog = "/blog/:year-:month-:slug/"
+  talk = "/talk/:filename/"
 
 [markup]
   defaultMarkdownHandler = "goldmark"
@@ -28,12 +33,12 @@ enableEmoji = true
     style = "github"
     
 [params]
-  orgName = ""
+  orgName = "Zhaoshan Duan"
   orgLocal = ""
-  description = "I don't want to go into law shcool."
+  description = "Zhaoshan Duan's personal blog and portfolio website."
   favicon = "/img/mountains_logo.png"
   logo = "/img/mountains_logo.png"
-  mainSections = ["blog", "project", "resume", "talks"]
+  mainSections = ["blog", "project", "talks"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -48,7 +53,7 @@ enableEmoji = true
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
   #         poppy / sky / violet / water 
-  theme = "plum"
+  theme = "violet"
   
   # or, leave theme empty & make your own palette
   # see docs at https://hugo-apero.netlify.app/blog/color-themes/
@@ -62,7 +67,7 @@ enableEmoji = true
   # sans-serif options: Commissioner / Atkinson Hyperlegible / Metropolis
   # if you import your own fonts, name them here too
   customtextFontFamily = "Commissioner"
-  customheadingFontFamily = "Fraunces"
+  customheadingFontFamily = ""
   # alternatively, leave empty and select basic font options: sans-serif or serif
   # for more http://tachyons.io/docs/typography/font-family/
   textFontFamily = "sans-serif"
