@@ -124,8 +124,4 @@ This is where things can be a bit case-to-case.
 
 # Other Good Sources, if you have time:
 
-Dr. Hill's
-
-# 4. Workflow Management
-
-Theme developers
+# 4. Useful `blogdown::` Functions
