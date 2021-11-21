@@ -2,7 +2,7 @@
 action_label: Read More &rarr;
 action_link: /about
 action_type: text
-description: I write about R, Python and Data Science.
+description: Welcome to my personal website! I write about Data Science, Statistics and whatever else I'm exploring. 
 image_left: false
 images:
 - img/nico.jpg
