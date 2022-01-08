@@ -11,7 +11,7 @@ headline: |
 My name is 段(Duàn) 兆杉(Zhào Shān). 
 
 ### Obligatory Why-Do-You-Switch-To-Data-Science Story
-I was in Poli Sci but didn't want to go to law school. Worked in nonprofit sector before founding passion in data and Bayes Theorem. 
+I was in Poli Sci but didn't want to go to law school. Worked in nonprofit sector before finding meaning in data and Bayes Theorem. 
 
 ### Currently
 Currently a M.S student in Statistics, with Concentration in Data Science at California State University, East Bay. 
