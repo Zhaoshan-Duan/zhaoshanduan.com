@@ -9,8 +9,8 @@ link_list_label: "Interests" # bookmarks, elsewhere, etc.
 link_list:
 - name: Guitar
   url: https://en.wikipedia.org/wiki/Fingerstyle_guitar
-- name: Chess
-  url: https://www.chess.com/home
+# - name: Chess
+#   url: https://www.chess.com/home
 # - name: People
 #  url: https://en.wikipedia.org/wiki/People
 ---

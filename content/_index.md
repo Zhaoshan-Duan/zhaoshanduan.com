@@ -2,10 +2,10 @@
 action_label: Read More &rarr;
 action_link: /about
 action_type: text
-description: Welcome to my personal website! I write about Data Science, Statistics and whatever else I'm exploring. 
+description: Welcome to my personal website! I write about Data Science, Statistics and whatever I'm exploring. 
 image_left: false
 images:
-- img/nico.jpg
+- img/yatou_sleep.jpg
 show_action_link: true
 show_social_links: true
 subtitle: Blog and Portfolio Website

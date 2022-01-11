@@ -1,79 +1,65 @@
 ---
-title: "Resources I Used To Re-build My Hugo & Blogdown Website in 2021"
+title: "Resources I Used To Re-build My Hugo & Blogdown Website in 2022"
 subtitle: ""
 excerpt: "In this blog, I list out some great resources I came across when rebuidling my hugo website. "
-author: Zhaoshan Duan
-date: 2021-11-22
+author: Zhaoshan "Joshua" Duan
+date: 2022-01-08
 slug: []
 categories: ['hugo','blogdown']
 tags: []
 ---
 
-In March 2021, I made a Portfolio and Blog site using `blogdown` with Hugo's [Toha](https://toha-guides.netlify.app/) theme since everybody and their grandmothers told me that a portfolio website is required to break into Data Science `r emo::ji("shrug")`. I fast-foodized the process by getting the site up and running as soon as possible (in less than 30 mins).
+In March 2021, I made a portfolio/blog site using `blogdown` with Hugo's [Toha](https://toha-guides.netlify.app/) theme since every Data Science influencers were telling me that a portfolio website is required to break into Data Science `r emo::ji("shrug")`. I fast-foodized the process by getting the site up as soon as possible (in less than 30 mins).
 
-I didn't write nearly as much as I wanted, and it was *obviously* the theme's fault. My lack of motivation had nothing to do with my [impostor syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome), anxiety of [Data Science career choices](https://towardsdatascience.com/why-you-should-consider-being-a-data-engineer-instead-of-a-data-scientist-2cf4e19dc019?gi=1bd3ea277ed8), and [existential crisis](https://yousefgh.medium.com/the-harsh-truth-about-data-science-5f1c2ce3554) of whether this field is really for me :weary:.
-
-Switching to another theme would **surely** solve all of my problems and motivates me to write again...
+I didn't write as much as I wanted, and it was *obviously* the theme's fault. My lack of motivation had nothing to do with my [impostor syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome) in the tech industry, anxiety of [Data Science career choices](https://towardsdatascience.com/why-you-should-consider-being-a-data-engineer-instead-of-a-data-scientist-2cf4e19dc019?gi=1bd3ea277ed8), and [existential crisis](https://yousefgh.medium.com/the-harsh-truth-about-data-science-5f1c2ce3554) of my identity in the American society. Switching to another theme would **surely** resolve all of my problems and motivates me to write again...
 
 ![](https://media.giphy.com/media/xT9IgBwI5SLzZGV2PC/giphy.gif)
 
-Well, it **didn't**, but it was a **pleasant distraction**. I took my time and I didn't expect to feel so *connected* to the `rstudio::blogdown` community. All of the wonderful resources have not only made this process fun, but also motivated me to write again! `r emo::ji("flushed")`
+Well, it **didn't**, but it was a **pleasant distraction**. For this launch, I took my time and felt so *connected* to the `rstudio::blogdown` community. All of the wonderful resources have not only made this process fun, but also motivated me to write again!
 
-Hence, to self-congratulate the launching of my new site `r emo::ji("award")`, in this first post, I would like to share the best resources I came across on this subject. I will cover the following topics:
+Hence, to self-congratulate the launching of my new site `r emo::ji("award")`, in my first post, I would like to share some of the best resources I used along the way. I will talk about: 
 
-1.  [What You Should Read to Start](#start)
+1.  [The Best Reading To Start](#start)
 
-2.  [Good Live Demos if Reading Isn't Your Thing](#demo)
+2.  [Live Demos If Reading Isn't Your Thing](#demo)
 
-3.  [Customize and Switching Hugo Theme](#theme)
+3.  [Customize And Switching Hugo Theme](#theme)
 
 4.  [Frequently Used Functions](#functions)
 
-Hopefully this post could help those who want to experiment building portfolio and blogging website.
-
-Last Updated: `r format(Sys.time(), '%B %d, %Y')`
+I hope this post would help those who are in interested in building their portfolio website using Hugo and `blogdown`. Last Updated: `r format(Sys.time(), '%B %d, %Y')`
 
 ![](https://media0.giphy.com/media/5zf2M4HgjjWszLd4a5/giphy.gif?cid=ecf05e47qc9pcmzsdy9e9imdvn6m64x1vuzh1bkes4nyxqn3&rid=giphy.gif&ct=g)
 
 ------------------------------------------------------------------------
 
-# 1. Start with "*Up & running with blogdown in 2021"* by Alison Hill{#start}
+## 1. Start with "*Up & running with blogdown in 2021"* by Alison Hill{#start}
 
-Dr Hill's [blog post](https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/) is probably **the most updated**, **easy-to-read-and-follow material** on this topic. I only wish I knew about this blog post earlier. You will most likely have your site up if you follow it through.
+I wish I discover this blog post sooner. Dr. Alison Hill's [blog post](https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/) is probably **the most updated** tutorial on this topic. It is easy to read and follow for those who have no backgrounds in web development (such as me), or relatively limited technical background in general (also me). You will most likely have your site up if you follow the post through.  
 
-The [post](https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/) shared some other great blogs early on but I think these make more sense after you have at least *tried* to deploy your site.
-
-The post also uses [Hugo Academic/Wowchemy](https://wowchemy.com/), a well-known, well-maintained Hugo theme. Hugo's theme can be the make-or-break component to your website, and it can get quite complicated. I found it to be a good first theme to experiment. I recommend exploring other themes *after* you have the site up. I will talk about switching themes [later](#theme).
+The walk-through uses [Hugo Academic/Wowchemy](https://wowchemy.com/), a well-known, well-maintained Hugo theme, and it is a good theme to your first experimental site. I'll write about exploring other themes [later in this post](#theme). The [blog](https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/) also shared some other great blogs early on but I think these make more sense after you have *tried* to deploy your site. 
 
 There can be a few hiccups with all the Git-related stuff. I found most of my answers from [Happy Git with R](http://happygitwithr.com/) by Jenny Bryan et al, or just Internet searches.
 
-**Seriously, leave this post now and go to the Dr. Hill's [post](https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/)**. Come back after you have your beautiful site up and running ! But if you don't like reading, feel free to jump to [Live Demos](#demo)
+**Seriously, leave this post now and go to the Dr. Hill's [post](https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/)**. Come back when you have your beautiful site up and running! However, if you don't like reading, feel free to jump to [Live Demos](#demo). 
 
 ------------------------------------------------------------------------
 
-*Welcome back!* Wasn't that a great read ?!
-
-Now we could be saying goodbye from here `r emo::ji("sad")`. If you already have your site up and want to explore other themes, [click here](#theme) where I talk about switching up your themes *somewhat* painlessly. Or, riding on the excitement of launching your own site, start writing your first blog just like what I'm doing right now !
-
-# 2. Good Live Demos{#demo}
+## 2. Live Demos{#demo}
 
 ![](https://media3.giphy.com/media/WTph4QyrK6jKfo9tI4/giphy.gif?cid=ecf05e47rcb6j1ru6jmddgwqcjz5a3s9rnsv2t5lchacwldj&rid=giphy.gif&ct=g)
 
-Live demos are great to watch, and even better *after* you have your site launched. You not only learn about others' experiences, and workflows, but also new practices that could potentially solve a problem you are facing.
+Live demos are great to watch, and even better *after* you have launched your site. You will not only learn about others' workflows, but also new practices that could solve a problem you are having. The majority of the live demos online can be in two categories: with or without `blogdown`. Here I will list three videos that I've used.
 
-There are a lot of live demos out there. I found they are primarily in two categories on this topic: with or without `blogdown`. Here I will list three videos that I found useful.
+### `blogdown` Folks (HIGHLY RECOMMENDED)
 
-## `blogdown` Folks (HIGHLY RECOMMENDED)
-
-Using `blogdown` makes things a lot easier if you are already using Rstudio and RMarkdown.
-
-If you don't want to read Dr. Alison Hill's [blog post](https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/), and prefer to have herself demonstrated it to you, you can go to this workshop she gave during one of the [R-Ladies Tunisia](https://rladies.org/tunisia-rladies/) meeting on May 31, 2021.
+Using `blogdown` makes things a lot easier if you are already using Rstudio and RMarkdown. It also saves you the trouble of using terminal directly. Since we already talked about Dr. Alison Hill's [blog post](https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/), if you prefer to have herself demonstrated it to you, you can go to this workshop she gave during one of the [R-Ladies Tunisia](https://rladies.org/tunisia-rladies/) meeting on May 26, 2021.
 
 <iframe width="600" height="300" src="https://www.youtube.com/embed/RksaNh5Ywbo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
 </iframe>
 
-Professor [Emmanuel Teitelbaum's](https://www.emmanuelteitelbaum.com/) workshop is great if you don't know the web development- and/or R-related jargon.
+Professor [Emmanuel Teitelbaum's](https://www.emmanuelteitelbaum.com/) workshop is great if you don't know the web development- and/or R-related jargons.
 
 <iframe width="600" height="300" src="https://www.youtube.com/embed/BHpkLJieXPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
@@ -81,23 +67,25 @@ Professor [Emmanuel Teitelbaum's](https://www.emmanuelteitelbaum.com/) workshop 
 
 ------------------------------------------------------------------------
 
-## Non-`blogdown` Folks :
+### Non-`blogdown` Folks :
 
-I actually set up my first site without `blogdown`. I don't recommend this method unless you have interest in web development. Unsurprisingly, my limited web dev experience and Hugo's nested directory structure have made even the smallest changes to the site quite difficult. Not to mention that Hugo site structures are heavily dependent on the theme you're using.
+My first site was actually set up without `blogdown`. I don't recommend this approach unless you have interests in web development. 
 
-With that being said, I recommend this video by Ken Jee and Data Professor.
+Unsurprisingly, my limited experience and Hugo's nested directory structure have made even the smallest customization quite difficult. Not to mention that Hugo site structures are heavily dependent on the theme you're using. With that being said, I recommend this video by Ken Jee and the Data Professor.
 
 <iframe width="600" height="300" src="https://www.youtube.com/embed/mEZ1Hj5yQ-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
 </iframe>
 
-# 3. Customizing and Switching themes{#theme}
+# 3. All About Themes{#theme}
 
 At this point, you probably have already modified the `config.toml/yaml` file of your site, updated the information in various `index.md` and `_index.md`, and cleaned out the exemplary files shipped with your theme. But you want to make it more personal, you may want to change to a different font family you like, or even switching to another theme without starting over.
 
 This section was going to be my main focus for this blog post because that was me.
 
 While most themes could use a `custom.css` file to override its default style, there are *theme-specific* changes you may need to make .
+
+Hugo's theme can be the make-or-break component of your first launch, and choosing a well-documented theme is key to the longevity of your website.
 
 ## Customizing Themes
 
@@ -117,8 +105,10 @@ Here I list out some of the functions I used, and a brief explanation for each
 
 -   `blogdown::server_site()`: For launching a local site in the Rstudio Viewer Pane.
 
--   `blogdown::stop_server()`:
+-   `blogdown::stop_server()`: 
 
 -   `blogdown::check_config()`: Whenever I modify the `config.toml` file, I run this to make sure all changes are getting through.
 
 -   `usethis::browse_github()`
+
+
