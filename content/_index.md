@@ -1,15 +1,15 @@
 ---
-action_label: Read More &rarr;
+action_label: "Read More <i class='fas fa-dog'></i>"
 action_link: /about
-action_type: text
-description: Welcome to my personal website! I write about Data Science, Statistics and whatever I'm exploring. 
-image_left: false
+action_type: button
+description: Welcome to my personal website! I write about Data Science and Statistics. 
+image_left: true
 images:
 - img/yatou_sleep.jpg
 show_action_link: true
 show_social_links: true
 subtitle: Blog and Portfolio Website
-text_align_left: false
+text_align_left: true
 title: Zhaoshan "Joshua" Duan's
 type: home
 ---
