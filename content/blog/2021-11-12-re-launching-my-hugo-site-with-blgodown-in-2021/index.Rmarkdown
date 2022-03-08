@@ -1,7 +1,7 @@
 ---
 title: "Resources I Used To Re-build My Hugo & Blogdown Website in 2022"
 subtitle: ""
-excerpt: "A curated list of some great resources I came across when rebuidling my hugo website. "
+excerpt: "A curated list of some great resources I came across when rebuidling my hugo website."
 author: Zhaoshan "Joshua" Duan
 date: 2022-01-08
 slug: []
@@ -90,11 +90,7 @@ At this point, you probably have already modified the `config.toml/yaml` file of
 
 This section was going to be my main focus for this first blog.
 
-Hugo's theme can be the make-or-break component of your first launch, and choosing a well-documented theme is key to the longevity of your website. This is why I recommended *Academy/Wowchemy* for your first experimental site in [Part 1](#start). 
-
-Except *Academy/Wowchemy* and my current theme Hugo [Apero](https://hugo-apero-docs.netlify.app/start/), all of the other themes that I've experimented with were not well-documented. 
-
-**Unsurprisingly**, during my first launch, my limited experience and Hugo's nested directory structure have made even the smallest customization quite difficult. 
+Hugo's theme can be the make-or-break component of your first launch, and choosing a well-documented theme is key to the longevity of your website. This is why I recommended *Academy/Wowchemy* for your first experimental site in [Part 1](#start). **Unsurprisingly**, during my first launch, my limited experience and Hugo's nested directory structure have made even the smallest customization quite difficult. 
 
 Not to mention that Hugo site structures are heavily dependent on the theme you're using. 
 
@@ -102,7 +98,7 @@ Not to mention that Hugo site structures are heavily dependent on the theme you'
 
 ### Customizing Themes
 
-I have to give you one of my least favorite to a question but it's honest: it depends.
+I have to give you one of my least favorite to a question but it's honest: it depends. Particularly, it depends on the theme. 
 
 Hugo sites are heavily dependent on the theme structure. While there are
 
